@@ -63,7 +63,6 @@ function showContent(content) {
     $("#subcontent").empty();
     if (content.subcontent) {
         $("#subcontent").append(content.subcontent);
-        addEditHandlers();
         $('[data-toggle="tooltip"]').tooltip();
     }
     $('#container').fadeTo(500, 100);
