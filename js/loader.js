@@ -62,12 +62,9 @@ function showContent(content) {
     $("#seo").empty().append(content.seo);
     $("#subcontent").empty();
     if (content.subcontent) {
-        $("#adminAdd").show();
         $("#subcontent").append(content.subcontent);
         addEditHandlers();
         $('[data-toggle="tooltip"]').tooltip();
-    } else {
-        $("#adminAdd").hide();
     }
     $('#container').fadeTo(500, 100);
     resize();

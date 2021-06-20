@@ -45,15 +45,15 @@ class descriptor
   		return $this->tags['menu'];
 	}
 
-        // Funcion que retorna el template de menu.
+    // Funcion que retorna el template de menu.
 	function getDownload()
 	{
 	   return $this->tags['download'];
 	}
         
-        function getExtension() {
-            return $this->tags['extension'];
-        }
+    function getExtension() {
+        return $this->tags['extension'];
+    }
 
 }
 ?>

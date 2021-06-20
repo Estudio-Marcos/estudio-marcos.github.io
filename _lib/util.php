@@ -29,39 +29,10 @@ function getFolder() {
 
 function getUrl() {
     $result = null;
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $result = $_POST['pagina'];
-    } else if (isset($_GET['page']))
+    if (isset($_GET['page']))
         $result = $_GET['page'];
     
     return ($result == null || $result === '') ? "home" : $result;
-}
-
-function backup() {
-	
-	// delete old backup file
-	unlink('backup.zip');
-	
-	// increase script timeout value
-	ini_set("max_execution_time", 300);
-	// create object
-	$zip = new ZipArchive();
-	// open archive
-	if ($zip->open("backup.zip", ZIPARCHIVE::CREATE) !== TRUE) {
-		die ("Could not open archive");
-	}
-	
-	// initialize an iterator
-	// pass it the directory to be processed
-	$iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator("./"));
-	// iterate over the directory
-	// add each file found to the archive
-	foreach ($iterator as $key=>$value) {
-		$zip->addFile(realpath($key), $key) or die ("ERROR: Could not add file: $key");
-	}
-	// close and save archive
-	$zip->close();
-	return 'backup.zip';
 }
 
 ?>
