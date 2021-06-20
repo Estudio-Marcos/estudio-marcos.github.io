@@ -27,7 +27,7 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          server: tp.mibvc.com.ar
+          server: ftp.mibvc.com.ar
           username: ftp_bvconline_576
           password: ${{ secrets.ftp_password }}
           server-dir: public_html/v2/
