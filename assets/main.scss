@@ -1,0 +1,239 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.page-link {
+  font-weight: 600;
+}
+
+.post-title {
+  font-weight: 700;
+}
+
+body {
+    background: #ECEEF1;
+    font-family: 'Merriweather Sans', sans-serif;
+    margin: 0;
+    min-width: 300px
+}
+logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    background: #ECEEF1;
+}
+
+.page-content {
+    background: url(../img/watermark.png) repeat;
+    background-size: contain;
+    width: 100%;
+}
+
+#cf {
+  position:relative;
+  height:150px;
+  width: 800px;
+  margin:0 auto;
+}
+
+.minima {
+  display: none;
+}
+
+@media all and (max-height: 400px) {
+  logo {
+      display: none;
+  }
+  .minima {
+      display: inherit;
+  }
+}
+
+@media all and (max-width: 400px) {
+  logo {
+      display: none;
+  }
+  .minima {
+      display: inherit;
+  }
+}
+
+#cf img.top {
+  position:absolute;
+  right:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  height: 100%;
+}
+
+#cf img.name {
+  position:absolute;
+  left:0;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  max-width: 525px;
+}
+
+#cf img.top:nth-of-type(2) {
+  -webkit-animation-delay: 20s;
+  -moz-animation-delay: 20s;
+   animation-delay: 20s;
+}
+#cf img.top:nth-of-type(3) {
+  -webkit-animation-delay: 15s;
+  -moz-animation-delay: 15s;
+  animation-delay: 15s;
+}
+#cf img.top:nth-of-type(4) {
+  -webkit-animation-delay: 10s;
+  -moz-animation-delay: 10s;
+  animation-delay: 10s;
+}
+#cf img.top:nth-of-type(5) {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5s;
+}
+#cf img.top:nth-of-type(6) {
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#cf img.top {
+  -webkit-animation-name: fadeInOut;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 25s;
+}
+
+@-webkit-keyframes fadeInOut /* Safari and Chrome */
+{
+  0%   {opacity:1;}
+  20%  {opacity:1;}
+  25%  {opacity:0;}
+  95%  {opacity:0;}
+  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeInOut /* Mozilla */
+{
+  0%   {opacity:1;}
+  20%  {opacity:1;}
+  25%  {opacity:0;}
+  95%  {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes fadeInOut 
+{
+  0%   {opacity:1;}
+  20%  {opacity:1;}
+  25%  {opacity:0;}
+  95%  {opacity:0;}
+  100% {opacity:1;}
+}
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "estudio-marcos";
+  src:url("../fonts/estudio-marcos.eot");
+  src:url("../fonts/estudio-marcos.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/estudio-marcos.ttf") format("truetype"),
+    url("../fonts/estudio-marcos.svg#estudio-marcos") format("svg"),
+    url("../fonts/estudio-marcos.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "estudio-marcos";
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "estudio-marcos";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.icon-edit:before {
+  content: "a";
+}
+
+.icon-add:before {
+  content: "b";
+}
+
+.icon-file-css:before {
+  content: "c";
+}
+
+.icon-file-xls:before, 
+.icon-file-xlsx:before {
+  content: "d";
+}
+
+.icon-file-openoffice:before {
+  content: "e";
+}
+
+.icon-file-pdf:before {
+  content: "f";
+}
+
+.icon-file-pptx:before, 
+.icon-file-ppt:before {
+  content: "g";
+}
+
+.icon-file-doc:before, 
+.icon-file-docx:before {
+  content: "h";
+}
+
+.icon-file-xml:before {
+  content: "i";
+}
+
+.icon-file-zip:before {
+  content: "j";
+}
+
+.icon-logout:before {
+  content: "k";
+}
+
+.icon-login:before {
+  content: "l";
+}
+
