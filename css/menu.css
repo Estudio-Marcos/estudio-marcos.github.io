@@ -1,0 +1,136 @@
+.nav-container {
+	width: 800px;
+	background: #7d7d7d url(../img/gradient.png) repeat-x 0 -110px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+}
+.nav {
+	margin: 0;
+	padding: 0 12px;
+	line-height: 100%;
+    font-size: small;
+    z-index: 10;
+}
+.nav li {
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+
+/* main level link */
+.nav a {
+	font-weight: bold;
+	color: #e7e5e5;
+	text-decoration: none;
+	display: block;
+	padding:  12px 10px;
+	margin: 0;
+	text-transform: capitalize;
+	text-shadow: 0 1px 1px rgba(0,0,0, .3);
+}
+.nav a:hover {
+	background: #000;
+	color: #fff;
+}
+
+/* main level link hover */
+.nav .current a, .nav li:hover > a {
+	background: #666 url(../img/gradient.png) repeat-x 0 -40px;
+	color: #444;
+
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0, .2);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0, .2);
+	box-shadow: 0 1px 1px rgba(0,0,0, .2);
+
+	text-shadow: 0 1px 0 rgba(255,255,255, 1);
+
+}
+
+/* sub levels link hover */
+.nav ul li:hover a, .nav li:hover li a {
+	background: none;
+	border: none;
+	color: #666;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+        padding:  4px 16px;
+}
+.nav ul a:hover {
+	background: #0078ff url(../img/gradient.png) repeat-x 0 -100px !important;
+	color: #fff !important;
+
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+
+	text-shadow: 0 1px 1px rgba(0,0,0, .1);
+}
+
+/* dropdown */
+.nav li:hover > ul {
+	display: block;
+}
+
+.up ul {
+	bottom: 30px;
+	right:  0px;
+}
+
+/* level 2 list */
+.nav ul {
+	display: none;
+
+	margin: 0;
+	padding: 0;
+	min-width: 102px;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	opacity: 0.99;
+	z-index: 1;
+	background: #ddd url(../img/gradient.png) repeat-x 0 0;
+	border: solid 1px #b4b4b4;
+
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .3);
+	box-shadow: 0 1px 3px rgba(0,0,0, .3);
+}
+
+
+.nav ul li {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav ul a {
+	font-weight: normal;
+	text-shadow: 0 1px 0 #fff;
+}
+
+/* level 3+ list */
+.nav ul ul {
+	left: 181px;
+	top: -3px;
+}
+
+/* clearfix */
+.nav:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+.nav {
+	display: inline-block;
+} 
+html[xmlns] .nav {
+	display: block;
+}
+ 
+* html .nav {
+	height: 1%;
+}

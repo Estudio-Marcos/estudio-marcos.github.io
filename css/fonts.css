@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "estudio-marcos";
+  src:url("../fonts/estudio-marcos.eot");
+  src:url("../fonts/estudio-marcos.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/estudio-marcos.ttf") format("truetype"),
+    url("../fonts/estudio-marcos.svg#estudio-marcos") format("svg"),
+    url("../fonts/estudio-marcos.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "estudio-marcos";
+  content: attr(data-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "estudio-marcos";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none !important;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 1em;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.icon-edit:before {
+  content: "a";
+}
+
+.icon-add:before {
+  content: "b";
+}
+
+.icon-file-css:before {
+  content: "c";
+}
+
+.icon-file-xls:before, 
+.icon-file-xlsx:before {
+  content: "d";
+}
+
+.icon-file-openoffice:before {
+  content: "e";
+}
+
+.icon-file-pdf:before {
+  content: "f";
+}
+
+.icon-file-pptx:before, 
+.icon-file-ppt:before {
+  content: "g";
+}
+
+.icon-file-doc:before, 
+.icon-file-docx:before {
+  content: "h";
+}
+
+.icon-file-xml:before {
+  content: "i";
+}
+
+.icon-file-zip:before {
+  content: "j";
+}
+
+.icon-logout:before {
+  content: "k";
+}
+
+.icon-login:before {
+  content: "l";
+}
+
