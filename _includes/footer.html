@@ -23,7 +23,9 @@
           {%- if site.address -%}
           <li>
             <i class="fas fa-map-marker-alt"></i>
-            <span>{{ site.address }}</span>
+            <a href="https://maps.google.com/maps?q={{ site.address | url_encode }}" target="_blank" class="address-link">
+              {{ site.address }}
+            </a>
           </li>
           {%- endif -%}
           {%- if site.phone -%}
@@ -38,9 +40,6 @@
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
     </div>
   </div>
 
@@ -106,6 +105,16 @@
   }
   
   .u-email:hover {
+    text-decoration: underline;
+  }
+  
+  .address-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .address-link:hover {
     text-decoration: underline;
   }
   
