@@ -1,0 +1,81 @@
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="contact-info">
+  <div class="address">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>{{ site.address }}</span>
+  </div>
+  
+  <div class="phones">
+    <i class="fas fa-phone"></i>
+    <span>Teléfonos: </span>
+    <a href="tel:{{ site.phone }}" class="phone-link">{{ site.phone }}</a>
+    <span> / </span>
+    <a href="tel:{{ site.phone2 }}" class="phone-link">{{ site.phone2 }}</a>
+  </div>
+  
+  <div class="email">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:{{ site.email }}" class="email-link">{{ site.email }}</a>
+  </div>
+</div>
+
+<style>
+.contact-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.contact-info > div {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  color: #007bff;
+  width: 16px;
+}
+
+.phone-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.phone-link:hover {
+  text-decoration: underline;
+}
+
+.email-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization for phone links */
+@media (max-width: 768px) {
+  .phone-link {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 2px;
+  }
+  
+  .phone-link:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+  }
+}
+</style>
