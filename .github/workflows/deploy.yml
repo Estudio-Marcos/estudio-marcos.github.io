@@ -1,23 +1,22 @@
-name: Deploy
+name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches: [ gh-actions ]
-
-  workflow_dispatch:
+    branches:
+      - main
 
 jobs:
-  build:
+  github-pages:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2
-
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
         with:
-          server: ftp.mibvc.com.ar
-          username: ftp_bvconline_576
-          password: ${{ secrets.ftp_password }}
-          server-dir: public_html/
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
