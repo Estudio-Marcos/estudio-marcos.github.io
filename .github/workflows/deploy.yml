@@ -27,6 +27,11 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
           
+      - name: Install dependencies
+        run: |
+          bundle config set --local force_ruby_platform true
+          bundle install
+          
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
