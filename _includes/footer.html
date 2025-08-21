@@ -1,0 +1,137 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+          </li>
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {%- if site.address -%}
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span>{{ site.address }}</span>
+          </li>
+          {%- endif -%}
+          {%- if site.phone -%}
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:{{ site.phone }}" class="phone-link">{{ site.phone }}</a>
+            {%- if site.phone2 -%}
+              / <a href="tel:{{ site.phone2 }}" class="phone-link">{{ site.phone2 }}</a>
+            {%- endif -%}
+          </li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+  .footer-col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .footer-col {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .footer-col-1 {
+    text-align: left;
+  }
+  
+  .footer-col-2 {
+    text-align: center;
+  }
+  
+  .footer-col-3 {
+    text-align: right;
+  }
+  
+  .contact-list, .social-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .contact-list li, .social-media-list li {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .social-media-list i {
+    color: #007bff;
+    width: 16px;
+  }
+  
+  .phone-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .phone-link:hover {
+    text-decoration: underline;
+  }
+  
+  .u-email {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .u-email:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-col-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .footer-col-1, .footer-col-2, .footer-col-3 {
+      text-align: center;
+    }
+    
+    .phone-link {
+      padding: 4px 8px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      display: inline-block;
+      margin: 2px;
+    }
+    
+    .phone-link:hover {
+      background-color: #0056b3;
+      text-decoration: none;
+    }
+  }
+  </style>
+</footer>
