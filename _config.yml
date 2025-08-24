@@ -34,8 +34,14 @@ theme: minima
 #theme: jekyll-text-theme
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
 
 google_analytics: UA-82125413-2
+
+# Google Search Console verification
+google_search_console: google4d810267ffcc0758
 
 header_pages:
  - estudio.md
